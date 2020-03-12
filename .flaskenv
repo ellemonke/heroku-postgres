@@ -1,2 +1,2 @@
 FLASK_ENV=development
-FLASK_APP=transit-systems
+FLASK_APP=app
