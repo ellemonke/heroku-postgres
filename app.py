@@ -72,15 +72,6 @@ def json_dict(results):
 @app.route("/")
 def index():
     return render_template("index.html")
-#     """List all available api routes"""
-#     return (
-#         f"Available Routes:<br/>"
-#         f"/api/v1.0/transit_systems<br/>"
-#         f"/api/v1.0/transit_systems/London<br/>"
-#         f"/api/v1.0/transit_systems/New York<br/>"
-#         f"/api/v1.0/transit_systems/Stockholm<br/>"
-#         f"..."
-#     )
 
 @app.route("/transit_systems")
 def transit_systems():
