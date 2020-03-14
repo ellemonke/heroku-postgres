@@ -27,6 +27,7 @@ Tracks = Base.classes.tracks
 # Flask Setup
 #################################################
 app = Flask(__name__)
+# db = SQLAlchemy(app)
 
 #################################################
 # Global Functions
