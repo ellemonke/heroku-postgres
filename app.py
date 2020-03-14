@@ -16,15 +16,6 @@ app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////data.sqlite'
 # db = SQLAlchemy(app)
 
-
-# class User(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     username = db.Column(db.String(80), unique=True, nullable=False)
-#     email = db.Column(db.String(120), unique=True, nullable=False)
-
-#     def __repr__(self):
-#         return '<User %r>' % self.username
-
 #################################################
 # Database Setup
 #################################################
@@ -42,16 +33,6 @@ Base.metadata.create_all(engine)
 # Save reference to the table
 Cities = Base.classes.cities
 Tracks = Base.classes.tracks
-
-# Main.__table__.create(bind = engine, checkfirst = True)
-# MainJSON.__table__.create(bind = engine, checkfirst = True)
-
-
-# Base.metadata.create_all(engine)
-
-# def recreate_database():
-#     Base.metadata.drop_all(engine)
-#     Base.metadata.create_all(engine)
 
 #################################################
 # Global Functions
@@ -91,7 +72,6 @@ def json_dict(results):
 @app.route("/")
 def index():
     return render_template("index.html")
-# def welcome():
 #     """List all available api routes"""
 #     return (
 #         f"Available Routes:<br/>"
@@ -102,7 +82,7 @@ def index():
 #         f"..."
 #     )
 
-@app.route("/api/v1.0/transit_systems")
+@app.route("/transit_systems")
 def transit_systems():
     """Display all transit system data"""
     # Query db for all results
@@ -113,7 +93,7 @@ def transit_systems():
     json_results = json_dict(results)
     return json_results
 
-@app.route("/api/v1.0/transit_systems/<city_name>")
+@app.route("/city/<city_name>")
 def city(city_name):
     """Filter transit system data based on the searched city"""
 
