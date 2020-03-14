@@ -7,7 +7,7 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, render_template, redirect, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from config import postgres_pw
+# from config import postgres_pw
 
 #################################################
 # Flask Setup
