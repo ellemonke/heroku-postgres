@@ -12,15 +12,15 @@ from config import postgres_pw
 # Flask Setup
 #################################################
 app = Flask(__name__)
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 
 #################################################
 # Database Setup
 #################################################
 # engine = create_engine(f'postgresql://postgres:{postgres_pw}@localhost:5432/city_transit_db')
-# engine = create_engine(f'postgres://aqspxgjztkrwou:231ae060d1b99f6902564e284dc3e92cce3211701743150d56804e2b932be2a0@ec2-184-72-236-3.compute-1.amazonaws.com:5432/d16mlrnprqss9t')
-engine = create_engine(f'sqlite:///data.sqlite')
+engine = create_engine(f'postgres://aqspxgjztkrwou:231ae060d1b99f6902564e284dc3e92cce3211701743150d56804e2b932be2a0@ec2-184-72-236-3.compute-1.amazonaws.com:5432/d16mlrnprqss9t')
+# engine = create_engine(f'sqlite:///data.sqlite')
 
 # reflect an existing database into a new model
 Base = automap_base()
