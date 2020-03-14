@@ -4,9 +4,9 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from flask_sqlalchemy import SQLAlchemy
 
 from flask import Flask, render_template, redirect, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
 from config import postgres_pw
 
 #################################################

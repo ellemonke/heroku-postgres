@@ -9,6 +9,7 @@ splinter
 pandas
 numpy
 Flask-RESTful
+Flask-SQLAlchemy
 Jinja2
 MarkupSafe==0.23
 aniso8601==0.82
