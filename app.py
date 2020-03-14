@@ -13,7 +13,7 @@ from config import postgres_pw
 #################################################
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////data.sqlite'
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
 
 # class User(db.Model):
@@ -36,9 +36,21 @@ Base = automap_base()
 # reflect the tables
 Base.prepare(engine, reflect=True)
 
+Base.metadata.create_all(engine)
+
 # Save reference to the table
-Cities = Base.classes.cities
-Tracks = Base.classes.tracks
+# Cities = Base.classes.cities
+# Tracks = Base.classes.tracks
+
+# Main.__table__.create(bind = engine, checkfirst = True)
+# MainJSON.__table__.create(bind = engine, checkfirst = True)
+
+
+# Base.metadata.create_all(engine)
+
+# def recreate_database():
+#     Base.metadata.drop_all(engine)
+#     Base.metadata.create_all(engine)
 
 #################################################
 # Global Functions
