@@ -40,8 +40,8 @@ Base.prepare(engine, reflect=True)
 Base.metadata.create_all(engine)
 
 # Save reference to the table
-# Cities = Base.classes.cities
-# Tracks = Base.classes.tracks
+Cities = Base.classes.cities
+Tracks = Base.classes.tracks
 
 # Main.__table__.create(bind = engine, checkfirst = True)
 # MainJSON.__table__.create(bind = engine, checkfirst = True)
