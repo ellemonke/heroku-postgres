@@ -12,7 +12,7 @@ from config import postgres_pw
 # Flask Setup
 #################################################
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////data.sqlite'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////data.sqlite'
 db = SQLAlchemy(app)
 
 
