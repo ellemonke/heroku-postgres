@@ -2,7 +2,7 @@ django
 gunicorn
 django-heroku
 requests
-certifi==2019.11.28
+certifi==2022.12.7
 flask
 psycopg2
 splinter
